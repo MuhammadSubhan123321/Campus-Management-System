@@ -295,10 +295,10 @@ export default function EditStudentPage() {
                   Student Information
                 </CardTitle>
 
-                <p className="mt-1 text-sm text-slate-500">
-                  Update the student's personal and
-                  academic information.
-                </p>
+                <p className="mt-0.5 text-xs leading-5 text-slate-500">
+                  Changes will update this student&apos;s
+                  portal information.
+               </p>
               </div>
             </div>
           </CardHeader>
@@ -516,7 +516,7 @@ export default function EditStudentPage() {
                 </p>
 
                 <p className="mt-0.5 text-xs leading-5 text-slate-500">
-                  Changes will update this student's
+                  Changes will update this student&apos;s
                   portal information.
                 </p>
               </div>

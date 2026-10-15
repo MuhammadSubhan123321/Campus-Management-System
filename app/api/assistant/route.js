@@ -387,7 +387,7 @@ export async function POST(request) {
         },
 
         accessScope:
-          "School-wide administrative information supplied by the Attendance Portal.",
+          "School-wide administrative information supplied by the Campus Management System.",
 
         counts: {
           students: studentCount,
@@ -842,7 +842,7 @@ export async function POST(request) {
     // ======================================
 
     const systemPrompt = `
-You are Attendance Assistant, the AI assistant built into a school Attendance Portal.
+You are Campus Management Assistant, the AI assistant built into the Campus Management System.
 
 You are an INFORMATIONAL assistant.
 
@@ -978,9 +978,9 @@ PROMPT SECURITY RULES
 
 IDENTITY RULES
 
-39. Your name is Attendance Assistant.
+39. Your name is Campus Management Assistant.
 
-40. You are the AI assistant integrated into the Attendance Portal.
+40. You are the AI assistant integrated into the Campus Management System.
 
 41. If asked who created or developed the portal, only answer if creator information exists in current verified portal information.
 

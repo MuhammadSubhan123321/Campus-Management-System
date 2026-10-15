@@ -44,22 +44,20 @@ export default function SubjectAssignmentsPage() {
   // =========================================
   // LOAD DATA
   // =========================================
-  async function loadData() {
-    try {
-      setLoading(true);
-      setError("");
 
-      const [
-        classesResponse,
-        subjectsResponse,
-        teachersResponse,
-        assignmentsResponse,
-      ] = await Promise.all([
-        fetch("/api/classes"),
-        fetch("/api/subjects"),
-        fetch("/api/teachers"),
-        fetch("/api/subject-assignments"),
-      ]);
+  async function loadData() {
+  try {
+    const [
+      classesResponse,
+      subjectsResponse,
+      teachersResponse,
+      assignmentsResponse,
+    ] = await Promise.all([
+      fetch("/api/classes"),
+      fetch("/api/subjects"),
+      fetch("/api/teachers"),
+      fetch("/api/subject-assignments"),
+    ]);
 
       const [
         classesData,
@@ -133,9 +131,13 @@ export default function SubjectAssignmentsPage() {
     }
   }
 
-  useEffect(() => {
-    loadData();
-  }, []);
+useEffect(() => {
+  async function initializeData() {
+    await loadData();
+  }
+
+  initializeData();
+}, []);
 
   // =========================================
   // SAVE ASSIGNMENT
